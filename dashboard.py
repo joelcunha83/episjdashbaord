@@ -358,19 +358,5 @@ else:
                 file_name=f"inscricoes_{ano_letivo}.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
-
-        st.markdown("### 📸 Exportar Gráficos")
-        for fig, nome in zip(
-            [fig_ilha, fig_idade, fig_idade_filtrada],
-            ["ilha", "idade_total", "idade_14_25"]
-        ):
-            buf_img = io.BytesIO()
-            fig.write_image(buf_img, format="png")
-            st.download_button(
-                label=f"📥 Descarregar {nome}.png",
-                data=buf_img.getvalue(),
-                file_name=f"{nome}_{ano_letivo}.png",
-                mime="image/png"
-            )
     else:
         st.info("👈 Carrega um ficheiro ou importa automaticamente para começar.")
