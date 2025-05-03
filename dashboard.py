@@ -100,11 +100,11 @@ from sqlalchemy import create_engine
 @st.cache_data
 def importar_dados_sql():
     try:
-        db_user = "UTILIZADOR"
-        db_pass = "PASSWORD"
-        db_host = "ENDERECO_DO_SERVIDOR"
+        db_user = "episjacores_dash"
+        db_pass = "4$B7yne*(cN("
+        db_host = "mysql.episj.com"
         db_port = "3306"
-        db_name = "NOME_DA_BASE"
+        db_name = "episjacores_new24"
         table_name = "inscricoes"
 
         engine = create_engine(f"mysql+pymysql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}")
